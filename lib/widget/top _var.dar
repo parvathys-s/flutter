@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+class TopBar extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final Color color;
+
+  TopBar({
+    required this.subtitle,
+    required this.title,
+    required this.color,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 44, horizontal: 23),
+      width: double.infinity,
+      color: color,
+      child: Row(
+        children: [
+          CircleAvatar(
+    
+radius: 40,
+            backgroundImage: NetworkImage(
+                'https://www.bing.com/images/search?view=detailV2&ccid=Z1tKdkl6&id=0D048227282C2F803B0D13DACDFBE2E8279830E1&thid=OIP.Z1tKdkl6dt8NUZCPJDkYeQHaLH&mediaurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8f%2F6c%2F77%2F8f6c7781116feb1650fef99161bb320b.jpg&exph=1650&expw=1100&q=Unsplash+Free+Wallpapers&simid=608010693106736614&ck=1868B1652673BA58EBFF6E1E18EC402F&selectedindex=1&form=IRPRST&ajaxhist=0&ajaxserp=0&vt=0&sim=11''),
+          ),
+          const SizedBox(width: 10),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                    fontSize: 22,
+     
+ fontWeight: FontWeight.w600,
+                    color: Colors.white),
+              ),
+              Text(
+                subtitle,
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
