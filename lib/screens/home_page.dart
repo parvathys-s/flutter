@@ -8,14 +8,13 @@ class HomePage extends StatelessWidget {
             child: Container(
                 height: 50,
                 width: 50,
-                color: Colors.red,
+                color: Colors.green,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                
-Text('first'),
-                    Text('second'),
+                    Text('Flower'),
+                    Text('Fruit'),
                   ],
                 ))));
   }
